@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Login Up</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="Style/Style.css">
+    <style>
+                body {
+                font-family: Arial, Helvetica, sans-serif;}
+        .form {
+        width:50%;
+        margin:0 auto;
+        border: 3px solid #f1f1f1;
+        }
+
+        input[type=text], input[type=password] {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          box-sizing: border-box;
+        }
+
+        button {
+          background-color: #4CAF50;
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          cursor: pointer;
+          width: 100%;
+        }
+
+        button:hover {
+          opacity: 0.8;
+        }
+
+        .cancelbtn {
+          width: auto;
+          padding: 10px 18px;
+          background-color: #f44336;
+        }
+
+        .imgcontainer {
+          text-align: center;
+          margin: 24px 0 12px 0;
+        }
+
+        img.avatar {
+          width: 150px;
+          heigth:150px;
+          border-radius: 50%;
+        }
+
+        .container {
+          padding: 16px;
+        }
+
+        span.psw {
+          float: right;
+          padding-top: 16px;
+        }
+
+        /* Измените стили для кнопки span и cancel на очень маленьких экранах */
+        @media screen and (max-width: 300px) {
+          span.psw {
+             display: block;
+             float: none;
+          }
+          .cancelbtn {
+             width: 100%;
+          }
+        }
+    </style>
+</head>
+
+<body>
+<div class="form">
+    <div class="imgcontainer">
+
+        <img src="https://files.fm/thumb_show.php?i=sf4r5zbdv" alt="Аватар" class="avatar">
+    </div>
+
+    <form action="/" method="post" class="container">
+        <label for="uname"><b>Пользователь</b></label>
+        <input type="text" placeholder="Введите имя" name="login" required>
+
+        <label for="psw"><b>Пароль</b></label>
+        <input type="password" placeholder="Введите пароль" name="password" required>
+
+        <button type="submit">Вход</button>
+        <label>
+            <input type="checkbox" checked="checked" name="remember"> Запомнить меня
+        </label>
+    </form>
+
+    <div class="container" style="background-color:#f1f1f1">
+        <button type="button" class="cancelbtn">Отменить</button>
+        <span class="psw">Забыли <a href="#">пароль?</a></span>
+    </div>
+</div>
+</body>
